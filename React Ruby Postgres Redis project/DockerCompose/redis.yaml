@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  cache-service:
+    image: redis:latest
+    environment:
+      REDIS_HOST: redis
+    networks:
+      - cache-network
+networks:
+  cache-network:
+    external: true
+    name: star-link

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  backendimg:
+    image: backend:v1
+    environment:
+      - ENV REDIS_HOST:cache-service
+      -	ENV POSTGRES_HOST:db
+      -	ENV POSTGRES_USER:postgres
+      -	ENV POSTGRES_PASSWORD:postgres
+      -	ENV POSTGRES_DATABASE:postgres
+    networks:
+      - backend
+    ports:
+      - 8080:8080
+networks:
+  backend:
+    external: true
+    name: star-link
