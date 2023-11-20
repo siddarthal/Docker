@@ -1,17 +1,18 @@
 version: '3'
 services:
   backendimg:
-    image: backend:v1
+    image: backend:l1
     environment:
-      - ENV REDIS_HOST:cache-service
-      -	ENV POSTGRES_HOST:db
-      -	ENV POSTGRES_USER:postgres
-      -	ENV POSTGRES_PASSWORD:postgres
-      -	ENV POSTGRES_DATABASE:postgres
+      -  REQUEST_ORIGIN: ip
+      -  REDIS_HOST: cache-service
+      -	 POSTGRES_HOST: db
+      -	 POSTGRES_USER: postgres
+      -	 POSTGRES_PASSWORD: postgres
+      -	 POSTGRES_DATABASE: postgres
     networks:
       - backend
-    ports:
-      - 8080:8080
+    # ports:
+    #   - 8080:8080
 networks:
   backend:
     external: true

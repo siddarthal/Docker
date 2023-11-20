@@ -9,6 +9,8 @@ services:
       POSTGRES_DATABASE: postgres
     networks:
       - database-network
+    volumes:
+      - ./database:/var/lib/postgresql/data
 networks:
   database-network:
     external: true
