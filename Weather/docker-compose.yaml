@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  frontendservice:
+    image: weather:frontend
+    networks:
+      - app-network
+    ports:
+      - 5000:3000
+networks:
+  app-network:
+    external: true
+    name: star-link
