@@ -2,10 +2,10 @@ $ docker login
 
 Next, you will need to rename the image to include your username, and then you can push it:
 
-$ docker tag <image-name>:<tag>  <username>/<repository> 
+$ docker tag "<image-name>:<tag>"  "<username>/<repository> "
   
 
-$ docker push <username>/<repository> 
+$ docker push "<username>/<repository>"
 
 when we try reverse proxy nginx reverse proxy there might be something running on port 80
 to check this out use this command...
