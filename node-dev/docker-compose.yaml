@@ -2,11 +2,13 @@ version: '3.7'
 
 services:
   node-dev-env:
-    build: .   # if image is no built
-    # image: node:v1 if image is already built
+    # build: . if we did not build the image go with this
+    image: node:v1
     command: npm start
-    ports: 
-      - 3000:3000
+    ports:
+      - 3000:3000  #if you want to add nginxy reverse proxy remove this ports section
+    networks:
+      - node-network
     volumes:
       - ./:/usr/src/app
       - node_modules:/usr/src/app/node_modules
@@ -14,3 +16,7 @@ services:
 
 volumes:
   node_modules:
+networks:
+  node-network:
+    name: star-link
+
