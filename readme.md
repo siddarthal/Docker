@@ -1,16 +1,16 @@
 
  # Steps to push your image to Dockerhub 
 ```bash
- docker login
+$ docker login
 ```
 
 ### Next, you will need to rename the image to include your username, and then you can push it:
 ```bash
- docker tag "image-name>:tag"    "username/repository "
+$ docker tag "image-name>:tag"    "username/repository "
 ```
 ### pushing
 ```bash
- docker push "username/repository"
+$ docker push "username/repository"
 ```
 
 # Nginx reverse proxy issues 
@@ -18,21 +18,39 @@
 ### when we try reverse proxy nginx reverse proxy there might be something running on port 80
 to check this out use this command...
 ```bash
- sudo lsof -i :80
+$ sudo lsof -i :80
 ```
 to remove it temporarily use the following command
 ```bash
-sudo service apache2 stop
+$ sudo service apache2 stop
 ```
 to restart it use
 ```bash
-sudo service apache2 start
+$ sudo service apache2 start
 
 ```
 ### docker_key:
 ```bash
  dckr_pat_tjwpHwCgZpl0FwRdkpYna5BhlfI
  ```
+
+# Steps to connect  EC2 
+
+### firstly generate key then execute the following
+
+```bash
+$ chmod 400 <keyname>.pem
+```
+```bash
+$ ssh -i <keyname>.pem <instance-user-name>@<public-ip or dns>
+```
+# Steps to connect Azure VM
+```bash
+$ chmod 400 <keyname>.pem
+```
+```bash
+ssh -i <key>.pem azure_root@<public-ip>
+```
 
 # Unix Commands Cheat Sheet 
 
