@@ -29,7 +29,10 @@ to restart it use
 sudo service apache2 start
 
 ```
-docker_key: dckr_pat_tjwpHwCgZpl0FwRdkpYna5BhlfI
+### docker_key:
+```bash
+ dckr_pat_tjwpHwCgZpl0FwRdkpYna5BhlfI
+ ```
 
 # Unix Commands Cheat Sheet 
 
