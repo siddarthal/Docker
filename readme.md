@@ -281,17 +281,17 @@ Define the host-side port to limit access, e.g., -p 127.0.0.1:3456:3000, allowin
 ```yaml
 version: '3.8'
 services:
-  youtube-dl-ubuntu:
+  <service-name-1>:
     image: <username>/<repositoryname>
     build:
       context: .
     volumes:
       - .:/mydir
-    container_name: youtube-dl
+    container_name: <any-name>
     environment:
       - VARIABLE=VALUE
       - VARIABLE2=VALUE2
-  whoami:
+  <service-name-2>:
     image: jwilder/whoami
     ports:
       - 8000:8000
@@ -401,10 +401,10 @@ Continuous Integration/Continuous Deployment (CI/CD) pipelines are fundamental i
 
 ## GitHub Actions Workflow
 
-The GitHub Actions workflow is defined in the `.github/workflows/deploy.yml` file in the repository [docker-hy/docker-hy.github.io](https://github.com/docker-hy/docker-hy.github.io). This workflow is triggered on every push to the `master` branch.
+The GitHub Actions workflow is defined in the `.github/workflows/deploy.yml` file . Generally workflow is triggered on every push to the `master` branch and you can change it depending up on your interest.
 
 ```yaml
-name: Release DevOps with Docker
+name:  Docker
 
 on:
   push:
@@ -414,22 +414,21 @@ on:
 jobs:
   deploy:
     name: Deploy to GitHub Pages
-    # [Details not discussed in this example]
-
+  
   publish-docker-hub:
     name: Publish image to Docker Hub
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Login to Docker Hub
-        uses: docker/login-action@v1
+        uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v5
         with:
           push: true
           tags: devopsdockeruh/coursepage:latest
@@ -551,8 +550,8 @@ $ cut -d “ ” -f 2 file --complement
 ```
 ## Echo and Variable Commands
 ```bash
-$ echo ${#varname}
-$ echo ${arr[0]}
+echo ${#varname}
+echo ${arr[0]}
 $ echo ${#arr[@]}
 $ echo ${arr[@]:8}
 $ echo ${arr[@]:3:4}
@@ -608,5 +607,3 @@ for SAMPLE in $@; do
 done
 ```
 
-
->>>>>>> 66de7418e2713b324ff6fed2f5e09b9a590df910
