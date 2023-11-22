@@ -6,7 +6,7 @@ $ docker login
 
 ### Next, you will need to rename the image to include your username, and then you can push it:
 ```bash
-$ docker tag "image-name>:tag"    "username/repository "
+$ docker tag "image-name>:tag"  "username/repository "
 ```
 ### pushing
 ```bash
