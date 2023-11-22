@@ -180,13 +180,9 @@ docker run -d --rm -it --name looper-it ubuntu sh -c 'while true; do date; sleep
 docker attach looper-it
 ```
 
-### Exercise 1.3: Secret Message
-```bash
-docker run -d -it --name secret-message devopsdockeruh/simple-web-service:ubuntu
-docker attach secret-message
-```
 
-### Exercise 1.4: Missing Dependencies
+
+### Running command on the go
 ```bash
 docker run -it --name website-input ubuntu sh -c 'while true; do
   echo "Input website:"; 
