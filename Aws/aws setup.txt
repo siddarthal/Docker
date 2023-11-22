@@ -1,0 +1,4 @@
+chmod 400 siddartha.pem
+ssh -i siddartha.pem ubuntu@<name>.pem
+apt get update
+apt-get install apache2
