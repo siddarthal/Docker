@@ -1,5 +1,5 @@
 
- # Steps to push your image to Dockerhub ...............................................................................................................
+ # Steps to push your image to Dockerhub 
 ```bash
 $ docker login
 ```
@@ -13,7 +13,7 @@ $ docker tag "image-name>:tag"    "username/repository "
 $ docker push "username/repository"
 ```
 
-# Nginx reverse proxy issues ................................................................................................................
+# Nginx reverse proxy issues 
 
 ### when we try reverse proxy nginx reverse proxy there might be something running on port 80
 to check this out use this command...
@@ -29,7 +29,7 @@ to restart it use
 sudo service apache2 start
 ```
 
-# Unix Commands Cheat Sheet ...............................................................................................................
+# Unix Commands Cheat Sheet 
 
 ## Grep Commands
 ```bash
