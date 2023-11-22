@@ -489,74 +489,74 @@ to restart it use
 
 ## Grep Commands
 ```bash
-$ grep -i "UNix" geekfile.txt
-$ grep -c "unix" geekfile.txt
-$ grep -l "unix" f1.txt f2.txt f3.xt f4.txt
-$ grep -w "unix" geekfile.txt
-$ grep -o "unix" geekfile.txt
-$ grep -n "unix" geekfile.txt
-$ grep -v "unix" geekfile.txt
-$ grep "^unix" geekfile.txt
-$ grep "os$" geekfile.tx
-$ grep –e "Agarwal" –e "Aggarwal" –e "Agrawal" geekfile.txt
-$ grep -A1 learn geekfile.txt
+grep -i "UNix" geekfile.txt
+grep -c "unix" geekfile.txt
+grep -l "unix" f1.txt f2.txt f3.xt f4.txt
+grep -w "unix" geekfile.txt
+grep -o "unix" geekfile.txt
+grep -n "unix" geekfile.txt
+grep -v "unix" geekfile.txt
+grep "^unix" geekfile.txt
+grep "os$" geekfile.tx
+grep –e "Agarwal" –e "Aggarwal" –e "Agrawal" geekfile.txt
+grep -A1 learn geekfile.txt
 ```
 ## Tail Commands
 ```bash
-$ tail -n 3 state.txt
-$ tail +25 state.txt
-$ tail -c -6 state.txt
-$ tail -c +263 state.txt
-$ tail -q state.txt capital.txt
+tail -n 3 state.txt
+tail +25 state.txt
+tail -c -6 state.txt
+tail -c +263 state.txt
+tail -q state.txt capital.txt
 ```
 # Sort Commands
 ```bash
-$ sort -o file 2file
-$ sort -r file
-$ sort -k 2n file
-$ sort -n file
-$ sort -nr file
+sort -o file 2file
+sort -r file
+sort -k 2n file
+sort -n file
+sort -nr file
 ```
 ## Awk Commands
 ```bash
-$ awk ‘{print}’ file
-$ awk ‘/manager/{print}’ file
-$ awk ‘{print $1,$3}’ file
-$ awk ‘{print NR,$0}’ file
-$ awk ‘{print NF}’ file
-$ awk ‘NR==3 , NR==6 {print}’ file
-$ awk ‘{print NR “-” $1}’
+awk ‘{print}’ file
+awk ‘/manager/{print}’ file
+awk ‘{print $1,$3}’ file
+awk ‘{print NR,$0}’ file
+awk ‘{print NF}’ file
+awk ‘NR==3 , NR==6 {print}’ file
+awk ‘{print NR “-” $1}’
 ```
 ## Sed Commands
 ```bash
-$ sed ‘s/unix/linux/’ file
-$ sed ‘s/u/l/3’ file
-$ sed ‘s/u/l/g’ file
-$ sed ‘s/u/l3g’ file
-$ sed ‘3 s/u/l/p’ file
-$ sed -n ‘s/unix/l/p’ file
-$ sed ‘1,3d’ file
-$ sed ‘3,$d’ file
-$ sed ‘nd’ file
-$ sed ‘3,5d’ file
-$ sed ‘/sid/d’ file
+sed ‘s/unix/linux/’ file
+sed ‘s/u/l/3’ file
+sed ‘s/u/l/g’ file
+sed ‘s/u/l3g’ file
+sed ‘3 s/u/l/p’ file
+sed -n ‘s/unix/l/p’ file
+sed ‘1,3d’ file
+sed ‘3,$d’ file
+sed ‘nd’ fi
+sed ‘3,5d’ file
+sed ‘/sid/d’ file
 ```
 ## Cut Commands
 ```bash
-$ cut -b 1-3,5-6 file
-$ cut -b 1,2,3 file
-$ cut -c 1,4,6 fil
-$ cut -d “ ” -f 2 file --complement
+cut -b 1-3,5-6 file
+cut -b 1,2,3 file
+cut -c 1,4,6 fil
+cut -d “ ” -f 2 file --complement
 ```
 ## Echo and Variable Commands
 ```bash
 echo ${#varname}
 echo ${arr[0]}
-$ echo ${#arr[@]}
-$ echo ${arr[@]:8}
-$ echo ${arr[@]:3:4}
-$ echo ${str:7}
-$ echo ${str:1:4}
+echo ${#arr[@]} 
+echo ${arr[@]:8}
+echo ${arr[@]:3:4}
+echo ${str:7}
+echo ${str:1:4}
 ```
 ## If-Else Command
 ```bash
